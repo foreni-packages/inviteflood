@@ -1,15 +1,19 @@
 Source: inviteflood
-Section: unknown
+Section: utils
 Priority: extra
 Maintainer: Devon Kearns <dookie@kali.org>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), libnet1-dev
 Standards-Version: 3.9.3
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/inviteflood.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/inviteflood.git;a=summary
+Homepage: http://www.hackingvoip.com/sec_tools.html
+Vcs-Git: ssh://git@git.kali.org/packages/inviteflood.git
+Vcs-Browser: http://git.kali.org/gitweb/?p=packages/inviteflood.git;a=summary
 
 Package: inviteflood
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${shlibs:Depends}, ${misc:Depends}, libnet1
+Description: SIP/SDP INVITE message flooding over UDP/IP
+ A tool to perform SIP/SDP INVITE message flooding over 
+ UDP/IP. It was tested on a Linux Red Hat Fedora Core 4 
+ platform (Pentium IV, 2.5 GHz), but it is expected this 
+ tool will successfully build and execute on a variety of 
+ Linux distributions.

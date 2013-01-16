@@ -11,3 +11,7 @@
 
 %:
 	dh $@ 
+
+override_dh_auto_build:
+	cd hack_library/ && $(MAKE) clean && $(MAKE) && cd ../inviteflood/ && $(MAKE)
+
